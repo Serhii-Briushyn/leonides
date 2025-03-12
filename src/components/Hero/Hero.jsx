@@ -1,7 +1,8 @@
-import styles from "./HeroSection.module.css";
 import logo from "../../assets/icons/logo.svg";
 
-const HeroSection = () => {
+import styles from "./Hero.module.css";
+
+const Hero = () => {
   return (
     <div className={styles.hero}>
       <h1 className={styles.title}>SINE METU</h1>
@@ -10,4 +11,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

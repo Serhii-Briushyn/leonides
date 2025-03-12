@@ -1,14 +1,26 @@
-/* eslint-disable no-unused-vars */
-
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import BorderedImage from "../BorderedImage/BorderedImage";
 import { menuItems } from "../../constants/menuItems";
 
 import closeIcon from "../../assets/icons/menu-rot.svg";
+
 import styles from "./Modal.module.css";
 
 const Modal = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <motion.div
       className={styles.overlay}
@@ -28,18 +40,21 @@ const Modal = ({ isOpen, onClose }) => {
         <button className={styles.closeButton} onClick={onClose}>
           <img src={closeIcon} alt="Menu Close" className={styles.closeIcon} />
         </button>
-        <ul className={styles.menuList}>
-          {menuItems.map(({ id, text, link, imgSrc, section }) => (
-            <li key={id} className={styles.menuItem}>
-              <BorderedImage
-                src={imgSrc}
-                text={text}
-                link={link}
-                section={section}
-              />
-            </li>
-          ))}
-        </ul>
+        <div className={styles.contentContainer}>
+          <ul className={styles.menuList}>
+            {menuItems.map(({ id, text, link, imgSrc, section }) => (
+              <li key={id} className={styles.menuItem}>
+                <BorderedImage
+                  src={imgSrc}
+                  text={text}
+                  link={link}
+                  section={section}
+                  onClose={onClose}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </motion.div>
     </motion.div>
   );

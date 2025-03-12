@@ -1,0 +1,28 @@
+.hero {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 10vw;
+  position: relative;
+  width: 100%;
+  padding-top: clamp(200px, 20vw, 420px);
+  padding-left: 24px;
+  padding-bottom: 96px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.title {
+  color: var(--gold);
+  font-family: "MyriadPro", sans-serif;
+  font-size: clamp(24px, 7vw, 64px);
+  letter-spacing: 4px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: clamp(100px, 13vw, 160px);
+  height: auto;
+}

@@ -1,8 +1,8 @@
 import styles from "./BorderedImage.module.css";
 
-const BorderedImage = ({ src, text, link, section }) => {
+const BorderedImage = ({ src, text, link, section, onClose }) => {
   return (
-    <a href={link} className={styles.link}>
+    <a href={link} className={styles.link} onClick={onClose}>
       <div className={styles.wrapper}>
         <img src={src} alt={text} className={styles.image} />
         <span className={styles.borderInner}></span>

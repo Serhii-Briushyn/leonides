@@ -17,7 +17,7 @@ export const menuItems = [
     id: 2,
     text: "ČO PONÚKA LEONIDES ?",
     section: "O2",
-    link: "#services",
+    link: "#offer",
     imgSrc: menu02,
   },
   {
@@ -31,7 +31,7 @@ export const menuItems = [
     id: 4,
     text: "ZMEŇ SVOJ ŽIVOT",
     section: "O4",
-    link: "#change-life",
+    link: "#transform",
     imgSrc: menu04,
   },
   {
@@ -45,7 +45,7 @@ export const menuItems = [
     id: 6,
     text: "KONTAKT",
     section: "O6",
-    link: "#contact",
+    link: "#footer",
     imgSrc: menu06,
   },
 ];

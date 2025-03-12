@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 3vw, 48px);
+  position: relative;
+  z-index: 2;
+}
+.container::before {
+  content: "";
+  background-image: url("../../assets/images/money-copy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18vw;
+  height: 18vw;
+  position: absolute;
+  bottom: 8%;
+  right: -10%;
+  z-index: 1;
+}
+
+.title {
+  font-family: "MostraNuova", sans-serif;
+  font-size: clamp(12px, 3vw, 32px);
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  color: var(--gold);
+  margin-bottom: clamp(6px, 2vw, 12px);
+}
+
+.description,
+.list > li {
+  font-family: "MyriadPro", sans-serif;
+  font-size: clamp(8px, 2vw, 24px);
+  line-height: clamp(1em, 3vw, 1.5em);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+.description span {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--gold);
+}

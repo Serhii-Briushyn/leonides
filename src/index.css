@@ -42,22 +42,28 @@
 }
 
 :root {
-  --primary-color: #ffffff;
-  --secondary-color: #fefefe;
-  --light-gray: #fdfdfd;
-  --gray: #fcfcfc;
-  --dark-gray: #fbfbfb;
+  --white: #ffffff;
   --gold: #b99c66;
   --black: #111111;
+  --red: #a05c53;
+  --blue: #6586b7;
+  --hover-blue: #004b91;
   --transition: all 0.3s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "MyriadPro", sans-serif;
   background-color: #fff;
   color: var(--black);
+  background-image: url("../../src/assets/svg/bg-black.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
-  position: relative;
 }
 
 ul {

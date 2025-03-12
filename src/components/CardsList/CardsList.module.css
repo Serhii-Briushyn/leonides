@@ -1,0 +1,100 @@
+.cardsWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: clamp(24px, 5vw, 108px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 29%;
+  opacity: 0;
+  transform: translateY(40%);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  will-change: opacity, transform;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  right: -0.3vw;
+  bottom: -0.3vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 4vw 4vw;
+  transition: var(--transition);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardTitle {
+  font-family: "MostraNuova", sans-serif;
+  font-size: clamp(12px, 3vw, 32px);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: clamp(24px, 5vw, 108px);
+  position: relative;
+  transition: var(--transition);
+}
+
+.cardTitle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -16px;
+  width: 30%;
+  height: 3px;
+  background-color: currentColor;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  position: relative;
+  filter: grayscale(100%);
+  transition: var(--transition);
+}
+
+.gold .cardTitle {
+  color: var(--gold);
+}
+
+.gold::after {
+  border-color: transparent transparent var(--gold) transparent;
+}
+
+.red .cardTitle {
+  color: var(--red);
+}
+
+.red::after {
+  border-color: transparent transparent var(--red) transparent;
+}
+
+.blue .cardTitle {
+  color: var(--blue);
+}
+.blue::after {
+  border-color: transparent transparent var(--blue) transparent;
+}
+
+.card:hover .cardTitle {
+  color: var(--hover-blue);
+}
+
+.card:hover::after {
+  border-color: transparent transparent var(--hover-blue) transparent;
+}
+
+.card:hover .cardImage {
+  filter: grayscale(0%);
+}

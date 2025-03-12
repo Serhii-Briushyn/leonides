@@ -16,20 +16,21 @@
   background-position: left;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-color: var(--primary-color);
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 64px;
 }
 
 .menuTitle {
   position: absolute;
   top: 24px;
   left: 16px;
-  color: var(--gold);
   font-family: "MyriadPro", sans-serif;
-  font-size: 16px;
+  font-size: clamp(12px, 2vw, 16px);
   font-weight: bold;
+  color: var(--gold);
 }
 
 .closeButton {
@@ -40,6 +41,7 @@
   background: none;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
+  width: clamp(48px, 8vw, 68px);
 }
 
 .closeButton:hover {
@@ -47,24 +49,30 @@
 }
 
 .closeIcon {
-  width: 36px;
+  width: 100%;
   height: auto;
+}
+
+.contentContainer {
+  max-width: 660px;
+  width: 100%;
 }
 
 .menuList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-left: 64px;
+  grid-template-columns: repeat(auto-fit, minmax(203px, 1fr));
   column-gap: 24px;
   row-gap: 64px;
+  width: 100%;
 }
 
 .menuItem {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .menu {
-    width: max-content;
+    min-width: 760px;
+    width: 50vw;
   }
 }

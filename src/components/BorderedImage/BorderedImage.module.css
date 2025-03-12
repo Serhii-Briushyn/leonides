@@ -17,7 +17,7 @@
   position: relative;
   width: 100px;
   height: 100px;
-  margin-left: 20px;
+  margin-left: 24px;
 }
 
 .image {
@@ -46,7 +46,7 @@
 }
 
 .link:hover .borderInner {
-  border-color: rgb(151, 92, 87);
+  border-color: var(--red);
 }
 
 .borderMiddle {
@@ -74,7 +74,6 @@
 
 .link:hover .borderOuterWrapper {
   animation: rotateAround 2s linear infinite;
-  border-color: blueviolet;
 }
 
 .borderOuter {
@@ -113,8 +112,7 @@
 
 .text {
   font-family: "MyriadPro", sans-serif;
-  font-size: 16px;
+  font-size: clamp(12px, 2vw, 16px);
   letter-spacing: 2px;
   font-weight: bold;
-  text-align: left;
 }
