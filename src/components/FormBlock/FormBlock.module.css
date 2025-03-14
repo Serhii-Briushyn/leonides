@@ -38,7 +38,7 @@ textarea {
   border: none;
   border-bottom: 2px solid var(--gold);
   font-family: "MyriadPro", sans-serif;
-  font-size: textarea;
+  font-size: clamp(14px, 3vw, 26px);
   padding: 8px;
   color: var(--black);
   background: transparent;
