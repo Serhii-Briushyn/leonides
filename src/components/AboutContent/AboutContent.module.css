@@ -5,6 +5,7 @@
   position: relative;
   z-index: 2;
 }
+
 .container::before {
   content: "";
   background-image: url("../../assets/images/money-copy.png");
@@ -33,7 +34,7 @@
   font-family: "MyriadPro", sans-serif;
   font-size: clamp(8px, 2vw, 24px);
   line-height: clamp(1em, 3vw, 1.5em);
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 2px;
   text-align: justify;
 }
@@ -42,4 +43,8 @@
   font-weight: bold;
   font-style: italic;
   color: var(--gold);
+}
+
+.container li:first-of-type p:first-of-type {
+  margin-bottom: clamp(12px, 2vw, 24px);
 }

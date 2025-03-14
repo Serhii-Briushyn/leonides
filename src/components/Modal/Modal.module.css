@@ -70,6 +70,40 @@
   width: 100%;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  font-family: "MostraNuova", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gold);
+  text-align: end;
+  width: 75%;
+  margin-bottom: 6px;
+}
+
+.separator {
+  width: 75%;
+  height: 4px;
+  background: linear-gradient(to right, var(--gold) 65%, lightgray 35%);
+  margin-bottom: 12px;
+}
+
+.text {
+  font-family: "MyriadPro", sans-serif;
+  font-size: clamp(12px, 2vw, 16px);
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 960px) {
   .menu {
     min-width: 760px;

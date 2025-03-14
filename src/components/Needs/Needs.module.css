@@ -1,0 +1,110 @@
+.section {
+  padding-top: 15vw;
+  position: relative;
+}
+
+.section::after {
+  content: "";
+  background-image: url("../../assets/svg/head.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 50vw;
+  position: absolute;
+  left: 0;
+  top: -8%;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.section::before {
+  content: "";
+  background-image: url("../../assets/svg/bg-needs-circles.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 79vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.upperHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  margin: 0 auto;
+  margin-bottom: 6vw;
+}
+
+.upperHeader h2 {
+  font-family: "MostraNuova", sans-serif;
+  font-size: clamp(32px, 5vw, 72px);
+  font-weight: bold;
+}
+
+.upperHeader p {
+  font-family: "MyriadPro", sans-serif;
+  font-size: clamp(10px, 2vw, 24px);
+  font-weight: 300;
+  letter-spacing: 0.3vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: auto;
+  background-image: url("../../assets/svg/bg-needs.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20vw;
+  padding-bottom: 18%;
+  z-index: 3;
+}
+
+.content {
+  width: 60vw;
+}
+
+.description,
+.item p {
+  font-family: "MyriadPro", sans-serif;
+  font-size: clamp(8px, 2vw, 24px);
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-align: justify;
+  margin-bottom: 2vw;
+}
+
+.description {
+  color: var(--gold);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.item h3 {
+  font-family: "MostraNuova", sans-serif;
+  font-size: clamp(12px, 3vw, 32px);
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  color: var(--gold);
+  margin-bottom: clamp(6px, 2vw, 12px);
+}
+
+.item p span {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--gold);
+}

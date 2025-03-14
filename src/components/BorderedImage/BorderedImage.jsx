@@ -1,22 +1,51 @@
 import styles from "./BorderedImage.module.css";
 
-const BorderedImage = ({ src, text, link, section, onClose }) => {
+const BorderedImage = ({ src, alt, variant, onHover }) => {
+  const isModal = variant === "modal";
+  const isNeeds = variant === "needs";
+
   return (
-    <a href={link} className={styles.link} onClick={onClose}>
-      <div className={styles.wrapper}>
-        <img src={src} alt={text} className={styles.image} />
-        <span className={styles.borderInner}></span>
-        <span className={styles.borderMiddle}></span>
-        <span className={styles.borderOuterWrapper}>
-          <span className={styles.borderOuter}></span>
-        </span>
-      </div>
-      <div className={styles.content}>
-        <span className={styles.section}>{section}</span>
-        <div className={styles.separator}></div>
-        <p className={styles.text}>{text}</p>
-      </div>
-    </a>
+    <div
+      className={`${styles.wrapper} ${
+        isModal ? styles.wrapperModal : isNeeds ? styles.wrapperNeeds : ""
+      }`}
+      onMouseEnter={onHover}
+      onMouseLeave={onHover}
+    >
+      <img src={src} alt={alt} className={styles.image} />
+
+      <span
+        className={`${styles.borderInner} ${
+          isModal
+            ? styles.borderInnerModal
+            : isNeeds
+            ? styles.borderInnerNeeds
+            : ""
+        }`}
+      ></span>
+
+      {isModal && <span className={styles.borderMiddle}></span>}
+
+      <span
+        className={`${styles.borderOuterWrapper} ${
+          isModal
+            ? styles.borderOuterWrapperModal
+            : isNeeds
+            ? styles.borderOuterWrapperNeeds
+            : ""
+        }`}
+      >
+        <span
+          className={`${styles.borderOuter} ${
+            isModal
+              ? styles.borderOuterModal
+              : isNeeds
+              ? styles.borderOuterNeeds
+              : ""
+          }`}
+        ></span>
+      </span>
+    </div>
   );
 };
 

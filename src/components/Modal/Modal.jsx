@@ -44,13 +44,14 @@ const Modal = ({ isOpen, onClose }) => {
           <ul className={styles.menuList}>
             {menuItems.map(({ id, text, link, imgSrc, section }) => (
               <li key={id} className={styles.menuItem}>
-                <BorderedImage
-                  src={imgSrc}
-                  text={text}
-                  link={link}
-                  section={section}
-                  onClose={onClose}
-                />
+                <a href={link} className={styles.link} onClick={onClose}>
+                  <BorderedImage src={imgSrc} alt={text} variant="modal" />
+                </a>
+                <div className={styles.content}>
+                  <span className={styles.section}>{section}</span>
+                  <div className={styles.separator}></div>
+                  <p className={styles.text}>{text}</p>
+                </div>
               </li>
             ))}
           </ul>

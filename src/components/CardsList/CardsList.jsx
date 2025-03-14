@@ -33,7 +33,7 @@ const CardsList = () => {
     <ul className={styles.cardsWrapper}>
       {cards.map((card, index) => {
         const ref = useRef(null);
-        const inView = useInView(ref, 30, 0.3);
+        const inView = useInView(ref, 30, 0.1);
 
         return (
           <li

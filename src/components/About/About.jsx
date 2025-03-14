@@ -1,7 +1,6 @@
 import AboutContent from "../AboutContent/AboutContent";
 import CardsList from "../CardsList/CardsList";
-
-import ornament from "../../assets/icons/ornament.svg";
+import SectionHeader from "../SectionHeader/SectionHeader";
 
 import styles from "./About.module.css";
 
@@ -10,11 +9,7 @@ const About = () => {
     <section id="about">
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
-          <div className={styles.titleWrapper}>
-            <h2 className={styles.title}>O SPOLOČNOSTI</h2>
-            <span className={styles.subtitle}>LEONIDES</span>
-            <img className={styles.ornament} src={ornament} alt="Ornament" />
-          </div>
+          <SectionHeader variant="about" />
           <CardsList />
           <AboutContent />
         </div>

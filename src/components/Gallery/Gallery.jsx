@@ -8,8 +8,8 @@ import styles from "./Gallery.module.css";
 const Gallery = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.gridWrapper}>
-        <div className={`${styles.item} ${styles.item1}`}>
+      <ul className={styles.gridWrapper}>
+        <li className={`${styles.item} ${styles.item1}`}>
           <img src={image01} alt="Spoločenské postavenie" />
           <div className={styles.overlayWrapper}>
             <div
@@ -25,9 +25,9 @@ const Gallery = () => {
               <p className={styles.text}>V SPOLOČENSKOM POSTAVENÍ</p>
             </div>
           </div>
-        </div>
+        </li>
 
-        <div className={`${styles.item} ${styles.item2}`}>
+        <li className={`${styles.item} ${styles.item2}`}>
           <img src={image02} alt="Kariéra" />
           <div className={styles.overlayWrapper}>
             <div
@@ -43,9 +43,9 @@ const Gallery = () => {
               <p className={styles.text}>VO SVOJEJ KARIÉRE</p>
             </div>
           </div>
-        </div>
+        </li>
 
-        <div className={`${styles.item} ${styles.item3}`}>
+        <li className={`${styles.item} ${styles.item3}`}>
           <img src={image03} alt="Financie" />
           <div className={styles.overlayWrapper}>
             <div
@@ -61,7 +61,7 @@ const Gallery = () => {
               <p className={styles.text}>S FINANČNOU NEZÁVISLOSŤOU</p>
             </div>
           </div>
-        </div>
+        </li>
 
         <div className={`${styles.item} ${styles.item4}`}>
           <img src={image04} alt="Vzdelávanie" />
@@ -80,7 +80,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-      </div>
+      </ul>
     </section>
   );
 };

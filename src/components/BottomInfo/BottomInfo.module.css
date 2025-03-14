@@ -1,0 +1,21 @@
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo,
+.ornament {
+  width: 100%;
+  height: auto;
+}
+
+.bottom p {
+  font-family: "MyriadPro", sans-serif;
+  font-size: clamp(8px, 2vw, 24px);
+  text-align: center;
+  line-height: 1.4;
+  opacity: 0.6;
+}

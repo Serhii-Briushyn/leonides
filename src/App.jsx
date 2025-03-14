@@ -5,19 +5,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Gallery from "./components/Gallery/Gallery";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 500,
-      once: false,
-      offset: 500,
-    });
-  }, []);
-
   return (
     <>
       <Header />

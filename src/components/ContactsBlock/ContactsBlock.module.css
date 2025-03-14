@@ -1,0 +1,27 @@
+.contacts {
+  margin-bottom: clamp(72px, 13vw, 186px);
+  position: relative;
+}
+
+.contacts::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25%;
+  width: 14%;
+  height: 3px;
+  background-color: var(--gold);
+}
+
+.contacts p {
+  font-family: "MostraNuova", sans-serif;
+  font-size: clamp(12px, 3vw, 32px);
+  font-weight: bold;
+  color: var(--gold);
+  text-align: center;
+}
+
+.contacts span {
+  color: var(--black);
+}
