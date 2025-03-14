@@ -13,7 +13,7 @@
 .footerContainer {
   height: 100%;
   width: 100%;
-  margin-bottom: clamp(48px, 5vw, 108px);
+  margin-bottom: clamp(48px, 7vw, 130px);
 }
 
 .background {

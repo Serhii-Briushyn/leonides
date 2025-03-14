@@ -67,7 +67,7 @@ textarea {
   border: none;
   background: transparent;
   font-family: "MyriadPro", sans-serif;
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(14px, 3vw, 26px);
   cursor: pointer;
   position: relative;
   color: var(--black);
