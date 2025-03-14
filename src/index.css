@@ -61,7 +61,7 @@ body {
   font-family: "MyriadPro", sans-serif;
   background-color: #fff;
   color: var(--black);
-  background-image: url("../../src/assets/svg/bg-black.svg");
+  background-image: url("/bg-black.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
